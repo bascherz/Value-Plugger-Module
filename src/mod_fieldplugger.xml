@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>Field Plugger</name>
     <author>Bruce Scherzinger</author>
-    <version>1.0.0</version>
+    <version>1.0</version>
     <description>Replaces placeholders in an HTML structure with module parameter values.</description>
     <files>
         <filename>mod_fieldplugger.xml</filename>
@@ -131,4 +131,7 @@
     </install>
     <uninstall>
     </uninstall>
-</extension>
+    <updateservers>
+        <server type="extension" name="Field Plugger Update Site">https://raw.githubusercontent.com/bascherz/field-plugger-module/master/manifest.xml</server>
+    </updateservers>
+    </extension>
