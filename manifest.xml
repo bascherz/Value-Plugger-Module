@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
 	<update>
-		<name>Field Plugger Module</name>
-		<description>Joomla! Field Plugger Module</description>
-		<element>mod_fieldplugger</element>
+		<name>Value Plugger Module</name>
+		<description>Joomla! Value Plugger Module</description>
+		<element>mod_valueplugger</element>
 		<type>module</type>
 		<version>2.0</version>
 		<client>site</client>
-		<infourl title="Field Plugger Module">https://github.com/bascherz/Field-Plugger-Module/releases/tag/2.0</infourl>
+		<infourl title="Value Plugger Module">https://github.com/bascherz/Value-Plugger-Module/releases/tag/2.0</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/bascherz/Field-Plugger-Module/releases/download/2.0/mod_fieldplugger_2.0.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/bascherz/Value-Plugger-Module/mod_fieldplugger_2.0.zip</downloadurl>
 		</downloads>
 		<targetplatform name="joomla" version="3.[6789]" />
 	</update>
