@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field
+        name="placeholder"
+        description="Enter the placeholder name for this plug."
+        type="text"
+        editor="None"
+        default=""
+        label="Placeholder:" />
+    <field
+        name="fieldvalue"
+        description="Enter a value. Insert it into your HTML using your placeholder name as {placeholder}"
+        type="text"
+        editor="None"
+        default=""
+        label="Value:" />
+</form>

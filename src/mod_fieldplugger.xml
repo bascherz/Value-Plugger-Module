@@ -2,13 +2,15 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>Field Plugger</name>
     <author>Bruce Scherzinger</author>
-    <version>1.0</version>
+    <version>2.0</version>
+    <creationDate>April 2018</creationDate>
     <description>Replaces placeholders in an HTML structure with module parameter values.</description>
     <files>
         <filename>mod_fieldplugger.xml</filename>
         <filename module="mod_fieldplugger">mod_fieldplugger.php</filename>
         <filename>index.html</filename>
         <filename>helper.php</filename>
+        <filename>fieldplug.xml</filename>
         <filename>tmpl/default.php</filename>
         <filename>tmpl/index.html</filename>
     </files>
@@ -27,103 +29,21 @@
 					<option value="0">JNO</option>
 				</field>
                 <field
-                    name="field1"
-                    description="Enter a value. Insert it into your HTML as {field1}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #1:" />
-                <field
-                    name="field2"
-                    description="Enter a value. Insert it into your HTML as {field2}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #2:" />
-                <field
-                    name="field3"
-                    description="Enter a value. Insert it into your HTML as {field3}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #3:" />
-                <field
-                    name="field4"
-                    description="Enter a value. Insert it into your HTML as {field4}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #4:" />
-                <field
-                    name="field5"
-                    description="Enter a value. Insert it into your HTML as {field5}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #5:" />
-                <field
-                    name="field6"
-                    description="Enter a value. Insert it into your HTML as {field6}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #6:" />
-                <field
-                    name="field7"
-                    description="Enter a value. Insert it into your HTML as {field7}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #7:" />
-                <field
-                    name="field8"
-                    description="Enter a value. Insert it into your HTML as {field8}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #8:" />
-                <field
-                    name="field9"
-                    description="Enter a value. Insert it into your HTML as {field9}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #9:" />
-                <field
-                    name="field10"
-                    description="Enter a value. Insert it into your HTML as {field10}"
-                    type="editor"
-                    editor="None"
-                    height="15"
-                    width="200"
-                    default=""
-                    label="Field #10:" />
-                <field
                     name="tablehtml"
-                    description="HTML code containing placeholders for where to insert field data entered above. Put field names in curly braces like {field1} where you want the data values."
+                    description="HTML code containing placeholders for where to insert field data entered above. Put field names in curly braces like [field1] where you want the data values."
                     type="editor"
                     filter="safehtml"
                     default=""
                     height="40"
                     label="Custom HTML:" />
+                <field name="plugs" type="subform"
+                    label="Field Values:"
+                    description="Define as many plugs as you need."
+                    formsource="/modules/mod_fieldplugger/fieldplug.xml"
+                    multiple="true"
+                    min="1"
+                    layout="joomla.form.field.subform.repeatable"
+                />
             </fieldset>
         </fields>
     </config>
@@ -132,6 +52,6 @@
     <uninstall>
     </uninstall>
     <updateservers>
-        <server type="extension" name="Field Plugger Update Site">https://raw.githubusercontent.com/bascherz/field-plugger-module/master/manifest.xml</server>
+        <server type="extension" name="Field Plugger Update Site">https://raw.githubusercontent.com/bascherz/Field-Plugger-Module/master/manifest.xml</server>
     </updateservers>
     </extension>

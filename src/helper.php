@@ -25,11 +25,12 @@ class ModFieldDataHelper
         // Retrieve the various parameters
         $fields = $params->get('fields');
         $tablehtml = $params->get('tablehtml');
+        $plugs = $params->get('plugs');
 
         // Go through the list of field names and replace each {fieldname} in the user-provided HTML.
-        for ($i = 1; $i <= 10; $i++)
+        foreach ($plugs as $plug)
         {
-            $tablehtml = html_entity_decode(str_replace("{field$i}",$params->get("field$i"),$tablehtml),ENT_QUOTES);
+            $tablehtml = html_entity_decode(str_replace("[$plug->placeholder]",$plug->fieldvalue,$tablehtml),ENT_QUOTES);
         }
 
         // Return the table with all fieldname substitutions made
