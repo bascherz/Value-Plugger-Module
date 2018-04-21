@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+	<update>
+		<name>Value Plugger Module</name>
+		<description>Joomla! Value Plugger Module</description>
+		<element>mod_valueplugger</element>
+		<type>module</type>
+		<version>2.1</version>
+		<client>site</client>
+		<infourl title="Value Plugger Module">https://github.com/bascherz/Value-Plugger-Module/releases/tag/2.1</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/bascherz/Value-Plugger-Module/releases/download/2.1/mod_valueplugger_2.1.zip</downloadurl>
+		</downloads>
+		<targetplatform name="joomla" version="3.[6789]" />
+	</update>
+</updates>

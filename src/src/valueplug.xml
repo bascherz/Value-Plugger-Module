@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="placeholders" label="Placeholders">
+        <field
+            name="placeholder"
+            description="Enter the placeholder name for this plug."
+            type="text"
+            editor="None"
+            default=""
+            label="Placeholder:" />
+    </fieldset>
+    <fieldset name="values" label="Values">
+        <field
+            name="datavalue"
+            description="Enter a value. Insert it into your HTML using your placeholder name as {placeholder}"
+            type="text"
+            editor="None"
+            default=""
+            label="Value:" />
+    </fieldset>
+</form>
