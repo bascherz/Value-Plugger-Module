@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" client="site" method="upgrade">
+    <name>Value Plugger</name>
+    <author>Bruce Scherzinger</author>
+    <version>3.0</version>
+    <creationDate>2022-10-23</creationDate>
+    <description>Replaces placeholders in an HTML structure with module parameter values.</description>
+    <namespace path="src">Joomla\Module\ValuePlugger</namespace>
+    <files>
+        <filename module="mod_valueplugger">mod_valueplugger.php</filename>
+        <filename>mod_valueplugger.xml</filename>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="prepare_content"
+                    type="radio"
+                    label="Prepare Content:"
+                    description="Optionally prepare the content with the Joomla content plugins."
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="plugs" type="subform"
+                    label="Click + to add &#8594;"
+                    description="Define as many plugs as you need. Clicking the + button to the right adds a new placeholder/value pair to the end. Clicking the + to the right
+                    of a row adds a pair after that row. Clicking - to the right of a row removes that row."
+                    formsource="/modules/mod_valueplugger/valueplug.xml"
+                    multiple="true"
+                    min="1"
+                    buttons="add,remove"
+                    groupByFieldset="true"
+                    layout="joomla.form.field.subform.repeatable-table"
+                />
+                <field
+                    name="tablehtml"
+                    description="HTML code containing placeholders for where to insert data value entered above. Put placeholder names in curly braces like [value1] where you want the data values."
+                    type="editor"
+                    filter="safehtml"
+                    default=""
+                    height="40"
+                    label="Custom HTML:" />
+            </fieldset>
+        </fields>
+    </config>
+    <install>
+    </install>
+    <uninstall>
+    </uninstall>
+    <updateservers>
+        <server type="extension" name="Value Plugger Update Site">https://raw.githubusercontent.com/bascherz/Value-Plugger-Module/master/j4/manifest.xml</server>
+    </updateservers>
+    </extension>
